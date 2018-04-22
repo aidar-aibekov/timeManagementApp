@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".questionnaire.ui.QuestionnaireListActivity" />
+        <activity android:name=".questionnaire.ui.QuestionnaireListActivity"></activity>
     </application>
 
 </manifest>
