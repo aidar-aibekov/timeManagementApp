@@ -1,7 +1,6 @@
 package de.fh_zwickau.taskerapp.questionnaire.service.impl;
 
 import android.os.AsyncTask;
-import android.support.annotation.WorkerThread;
 
 import java.util.Collections;
 import java.util.List;
@@ -31,14 +30,14 @@ public abstract class AbstractPersistenceService<T extends Entity> implements Pe
             return new AsyncTask<Void, Void, List<T>>() {
 
                 @Override
-                protected  List<T> doInBackground(Void... voids) {
+                protected List<T> doInBackground(Void... voids) {
                     return dao.findAll();
                 }
             }.execute().get();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return Collections.EMPTY_LIST;
+        return Collections.emptyList();
     }
 
     @Override
