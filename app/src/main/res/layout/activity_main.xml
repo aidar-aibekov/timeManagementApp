@@ -5,9 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <TextView
         android:id="@+id/my_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/viewAllTasksButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="View All the Tasks"
+                android:theme="@style/MyButton"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/addNewTaskButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Add new Task"
+                android:theme="@style/MyButton"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/passTheTestButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="pass the test"
+                android:theme="@style/MyButton"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/aboutTimeManagemnetButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="about TimeManagement"
+                android:theme="@style/MyButton"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
