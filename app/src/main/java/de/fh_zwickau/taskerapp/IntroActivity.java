@@ -13,10 +13,11 @@ public class IntroActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
+
         new Handler().postDelayed(() -> {
-            Intent homeIntent = new Intent(IntroActivity.this, MainActivity.class);
+            Intent homeIntent = new Intent(this, MainActivity.class);
             startActivity(homeIntent);
-            finish();
+            //finish();
         }, SPLASH_TIME_OUT);
     }
 }
