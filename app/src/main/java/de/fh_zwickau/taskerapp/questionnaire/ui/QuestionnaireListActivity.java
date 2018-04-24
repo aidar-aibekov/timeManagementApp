@@ -14,6 +14,7 @@ import de.fh_zwickau.taskerapp.questionnaire.service.impl.QuestionnaireServiceIm
 import de.fh_zwickau.taskerapp.questionnaire.ui.adapter.QuestionnaireAdapter;
 
 public class QuestionnaireListActivity extends AppCompatActivity {
+
     private QuestionnaireService questionnaireService = new QuestionnaireServiceImpl();
 
     @Override
@@ -21,7 +22,7 @@ public class QuestionnaireListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire_list);
         List<Questionnaire> questionnaires = questionnaireService.getAll();
-        QuestionnaireAdapter adapter = new QuestionnaireAdapter(questionnaires);
+        QuestionnaireAdapter adapter = new QuestionnaireAdapter(questionnaires, this);
         RecyclerView recyclerView = findViewById(R.id.questionnaire_list_recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

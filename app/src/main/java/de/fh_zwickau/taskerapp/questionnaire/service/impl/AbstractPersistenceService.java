@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import de.fh_zwickau.taskerapp.questionnaire.dao.AppDatabase;
 import de.fh_zwickau.taskerapp.questionnaire.dao.Dao;
@@ -42,17 +43,42 @@ public abstract class AbstractPersistenceService<T extends Entity> implements Pe
 
     @Override
     public void save(T... objects) {
-        dao.insert(objects);
+        new AsyncTask() {
+            @Override
+            protected Object doInBackground(Object[] os) {
+                dao.insert(objects);
+                return null;
+            }
+        }.execute();
     }
 
     @Override
     public T getById(Integer id) {
-        return dao.findById(id);
+        try {
+            return new AsyncTask<Void, Void, T>() {
+
+                @Override
+                protected T doInBackground(Void... voids) {
+                    return dao.findById(id);
+                }
+            }.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public void remove(T... objects) {
-        dao.delete(objects);
+        new AsyncTask() {
+            @Override
+            protected Object doInBackground(Object[] os) {
+                dao.delete(objects);
+                return null;
+            }
+        }.execute();
     }
 
     protected abstract Class<T> getClassName();

@@ -13,6 +13,11 @@ public class Questionnaire implements de.fh_zwickau.taskerapp.questionnaire.mode
     public Questionnaire() {
     }
 
+    public Questionnaire(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Questionnaire(String name) {
         this.name = name;
     }

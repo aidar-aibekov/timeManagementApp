@@ -18,7 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".questionnaire.ui.QuestionnaireListActivity" />
-        <activity android:name=".questionnaire.ui.QuestionnaireListActivity"></activity>
+        <activity android:name=".questionnaire.ui.QuestionnaireListActivity" />
+        <activity android:name=".questionnaire.ui.QuestionLayout" />
+        <activity android:name=".questionnaire.ui.QuestionnaireResultActivity"></activity>
     </application>
 
 </manifest>

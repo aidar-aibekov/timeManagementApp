@@ -6,7 +6,7 @@
     android:layout_margin="8dp">
 
     <Button
-        android:id="@+id/simple_text"
+        android:id="@+id/questionnaire_name_button"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:layout_marginVertical="8dp"

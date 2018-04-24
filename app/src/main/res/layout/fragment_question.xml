@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".questionnaire.view.QuestionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="24dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginBottom="64dp"
+        android:text="" />
+
+    <RadioGroup
+        android:id="@+id/answer_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/never_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textSize="24dp"
+            android:text="@string/never" />
+
+        <RadioButton
+            android:id="@+id/infrequently_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textSize="24dp"
+            android:text="@string/infrequently" />
+
+        <RadioButton
+            android:id="@+id/sometimes_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textSize="24dp"
+            android:text="@string/sometimes" />
+
+        <RadioButton
+            android:id="@+id/frequently_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textSize="24dp"
+            android:text="@string/frequently" />
+
+        <RadioButton
+            android:id="@+id/always_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textSize="24dp"
+            android:text="@string/always" />
+    </RadioGroup>
+
+</FrameLayout>

@@ -18,7 +18,16 @@ public class Question implements de.fh_zwickau.taskerapp.questionnaire.model.Ent
     @ColumnInfo(name = "questionnaire_id")
     private Integer questionnaireId;
     private String question;
-    private String answer;
+    private String answer = Answer.NOTHING.name();
+
+
+    public Question() {
+    }
+
+    public Question(Integer questionnaireId, String question) {
+        this.questionnaireId = questionnaireId;
+        this.question = question;
+    }
 
     public Integer getId() {
         return id;

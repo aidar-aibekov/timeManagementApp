@@ -1,5 +1,7 @@
 package de.fh_zwickau.taskerapp.questionnaire.ui.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -7,20 +9,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.List;
 
 import de.fh_zwickau.taskerapp.R;
+import de.fh_zwickau.taskerapp.questionnaire.model.Question;
 import de.fh_zwickau.taskerapp.questionnaire.model.Questionnaire;
-import de.fh_zwickau.taskerapp.questionnaire.ui.QuestionnaireListActivity;
+import de.fh_zwickau.taskerapp.questionnaire.ui.QuestionLayout;
 
 public class QuestionnaireAdapter extends RecyclerView.Adapter {
 
-    private List<Questionnaire> questionnaires;
+    public static final String EXTRA_QUESTIONNAIRE_ID = "QUESTOINNAIRE_ID";
 
-    public QuestionnaireAdapter(final List<Questionnaire> questionnaires) {
+    private List<Questionnaire> questionnaires;
+    private Context context;
+
+    public QuestionnaireAdapter(final List<Questionnaire> questionnaires, Context context) {
         this.questionnaires = questionnaires;
+        this.context = context;
     }
 
 
@@ -29,15 +35,11 @@ public class QuestionnaireAdapter extends RecyclerView.Adapter {
         public Button button;
         public ViewHolder(View v) {
             super(v);
-            button = v.findViewById(R.id.simple_text);
+            button = v.findViewById(R.id.questionnaire_name_button);
         }
 
         public void bindData(final Questionnaire questionnaire) {
             button.setText(questionnaire.getId() + " " + questionnaire.getName());
-
-            button.setOnClickListener( e -> {
-                Log.v("my tag", questionnaire.getId().toString());
-            });
         }
 
     }
@@ -52,7 +54,14 @@ public class QuestionnaireAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ((ViewHolder)holder).bindData(questionnaires.get(position));
+        Questionnaire questionnaire = questionnaires.get(position);
+        ((ViewHolder)holder).bindData(questionnaire);
+
+        ((ViewHolder)holder).button.setOnClickListener(view -> {
+            Intent intent = new Intent(context, QuestionLayout.class);
+            intent.putExtra(EXTRA_QUESTIONNAIRE_ID, questionnaire.getId());
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -62,6 +71,6 @@ public class QuestionnaireAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemViewType(int position) {
-        return R.layout.item_simple_itemview;
+        return R.layout.item_questionnaire_itemview;
     }
 }

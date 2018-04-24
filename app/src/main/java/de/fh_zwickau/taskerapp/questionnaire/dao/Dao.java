@@ -8,8 +8,10 @@ import java.util.List;
 
 import de.fh_zwickau.taskerapp.questionnaire.model.Entity;
 
+import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
+
 public interface Dao<T extends Entity> {
-    @Insert
+    @Insert(onConflict = REPLACE)
     void insert(T... ts);
 
     @Update
