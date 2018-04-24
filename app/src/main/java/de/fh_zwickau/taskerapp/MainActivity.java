@@ -27,12 +27,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button addNewTaskButton= findViewById(R.id.addNewTaskButton);
-        addNewTaskButton.setOnClickListener(v -> Log.d("MainActivity", "addNewTaskButton has just been pressed"));
-        addNewTaskButton.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, AddTaskActivity.class);
-            startActivity(i);
-        });
         Button passTheTestButton= findViewById(R.id.passTheTestButton);
         passTheTestButton.setOnClickListener(v -> Log.d("MainActivity", "passTheTest has just been pressed"));
         passTheTestButton.setOnClickListener(view -> {

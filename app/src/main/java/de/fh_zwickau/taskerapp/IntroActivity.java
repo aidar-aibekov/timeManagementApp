@@ -17,7 +17,6 @@ public class IntroActivity extends AppCompatActivity  {
         new Handler().postDelayed(() -> {
             Intent homeIntent = new Intent(this, MainActivity.class);
             startActivity(homeIntent);
-            //finish();
         }, SPLASH_TIME_OUT);
     }
 }

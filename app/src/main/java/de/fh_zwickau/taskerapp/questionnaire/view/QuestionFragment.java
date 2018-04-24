@@ -40,7 +40,6 @@ public class QuestionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View inflate = inflater.inflate(R.layout.fragment_question, container, false);
 
         TextView textView = inflate.findViewById(R.id.question_text_view);
@@ -52,21 +51,6 @@ public class QuestionFragment extends Fragment {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton radioButton = radioGroup.findViewById(checkedId);
             question.setAnswer(String.valueOf(radioButton.getText()));
-//            if(checkedId == R.id.always_radio_button) {
-//                question.setAnswer(Answer.ALWAYS.name());
-//            }
-//            if(checkedId == R.id.never_radio_button) {
-//                question.setAnswer(Answer.NEVER.name());
-//            }
-//            if(checkedId == R.id.sometimes_radio_button) {
-//                question.setAnswer(Answer.SOMETIMES.name());
-//            }
-//            if(checkedId == R.id.frequently_radio_button) {
-//                question.setAnswer(Answer.FREQUENTLY.name());
-//            }
-//            if(checkedId == R.id.infrequently_radio_button) {
-//                question.setAnswer(Answer.INFREQUENTLY.name());
-//            }
         });
         return inflate;
     }

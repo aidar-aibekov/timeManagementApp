@@ -6,4 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".AbouttmActivity">
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/MainRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/MainLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/WhatIsTimeManagementTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:text="What is Time Management?"
+                    android:textSize="27sp"></TextView>
+
+                <TextView
+                    android:id="@+id/TextView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="20sp"
+                    android:text="Working Smarter to Enhance Productivity"></TextView>
+
+                <TextView
+                    android:id="@+id/TextView08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="It seems that there is never enough time in the day. But, since we all get the same 24 hours, why is it that some people achieve so much more with their time than others? The answer lies in good time management."></TextView>
+
+                <TextView
+                    android:id="@+id/TextView09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="The highest achievers manage their time exceptionally well. By using the time-management techniques in this section, you can improve your ability to function more effectively – even when time is tight and pressures are high."></TextView>
+
+                <TextView
+                    android:id="@+id/TextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="Good time management requires an important shift in focus from activities to results: being busy isn’t the same as being effective. (Ironically, the opposite is often closer to the truth.)"></TextView>
+
+                <TextView
+                    android:id="@+id/TextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="Spending your day in a frenzy of activity often achieves less, because you’re dividing your attention between so many different tasks. Good time management lets you work smarter – not harder – so you get more done in less time."></TextView>
+
+                <TextView
+                    android:id="@+id/TextView04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="“Time management” refers to the way that you organize and plan how long you spend on specific activities."></TextView>
+
+                <TextView
+                    android:id="@+id/TextView05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="It may seem counter-intuitive to dedicate precious time to learning about time management, instead of using it to get on with your work, but the benefits are enormous:"></TextView>
+
+                <TextView
+                    android:id="@+id/TextView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="Greater productivity and efficiency.
+ * A better professional reputation.
+ * Less stress.
+ * Increased opportunities for advancement.
+ * Greater opportunities to achieve important life and career goals.
+
+ Failing to manage your time effectively can have some very undesirable consequences:
+
+ * Missed deadlines.
+ * Inefficient work flow.
+ * Poor work quality.
+ * A poor professional reputation and a stalled career.
+ * Higher stress levels."></TextView>
+
+                <TextView
+                    android:id="@+id/TextView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:textSize="17sp"
+                    android:text="Spending a little time learning about time-management techniques will have huge benefits now – and throughout your career."></TextView>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
 </android.support.constraint.ConstraintLayout>

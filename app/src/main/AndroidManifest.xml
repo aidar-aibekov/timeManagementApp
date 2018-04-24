@@ -5,12 +5,12 @@
     <application
         android:name=".TaskerApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/tasker"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/tasker_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,23 +24,27 @@
             android:exported="false"/>
 
         <activity android:name=".todoapp.TodoEntryActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name"></activity>
 
         <activity
             android:name=".todoapp.TaskActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.Light"
             android:parentActivityName=".todoapp.TodoEntryActivity"/>
 
         <activity
             android:name=".todoapp.SettingsActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.Light"
             android:parentActivityName=".todoapp.TodoEntryActivity"/>
 
         <activity
             android:name=".todoapp.TaskDetailActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.Light"
             android:parentActivityName=".todoapp.TodoEntryActivity"/>
 
@@ -49,12 +53,16 @@
             android:exported="false" />
 
 
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".questionnaire.ui.QuestionnaireListActivity" />
-        <activity android:name=".questionnaire.ui.QuestionLayout" />
-        <activity android:name=".questionnaire.ui.QuestionnaireResultActivity"></activity>
-        <activity android:name=".AbouttmActivity" />
-        <activity android:name=".AddTaskActivity" android:theme="@style/Theme.Design.Light"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".questionnaire.ui.QuestionnaireListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".questionnaire.ui.QuestionLayout"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".questionnaire.ui.QuestionnaireResultActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".AbouttmActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

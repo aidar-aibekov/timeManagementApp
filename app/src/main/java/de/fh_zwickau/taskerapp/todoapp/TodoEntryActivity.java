@@ -39,6 +39,7 @@ public class TodoEntryActivity extends AppCompatActivity implements TaskAdapter.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_entry);
+        setContentView(R.layout.activity_todo_entry);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);

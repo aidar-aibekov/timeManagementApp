@@ -28,24 +28,11 @@
                 android:id="@+id/viewAllTasksButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="View All the Tasks"
-                android:theme="@style/PrimaryButton"
+                android:text="Tasks"
+                android:theme="@style/MyButton"
                 android:textColor="@color/colorWhite"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            >
-            <Button
-                android:id="@+id/addNewTaskButton"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:text="Add new Task"
-                android:theme="@style/PrimaryButton"
-                android:textColor="@color/colorWhite"/>
-        </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -57,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:text="pass the test"
-                android:theme="@style/PrimaryButton"
+                android:theme="@style/MyButton"
                 android:textColor="@color/colorWhite"/>
         </LinearLayout>
 
@@ -71,8 +58,8 @@
                 android:id="@+id/aboutTimeManagemnetButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="about TimeManagement"
-                android:theme="@style/PrimaryButton"
+                android:text="about Time Management"
+                android:theme="@style/MyButton"
                 android:textColor="@color/colorWhite"/>
         </LinearLayout>
     </LinearLayout>

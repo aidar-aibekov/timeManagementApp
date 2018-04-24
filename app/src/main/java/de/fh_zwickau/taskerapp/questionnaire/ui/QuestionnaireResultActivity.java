@@ -41,7 +41,7 @@ public class QuestionnaireResultActivity extends AppCompatActivity {
         TextView numberOfQuestionsTextView = findViewById(R.id.number_of_questions_textview);
 
         totalPointsTextView.setText(totalPointsTextView.getText() + " : " + String.valueOf(totalPoints));
-        avgPointsTextView.setText(avgPointsTextView.getText() + " : " + String.valueOf(avgPoint));
+        avgPointsTextView.setText(avgPointsTextView.getText() + " " + String.valueOf(avgPoint));
         numberOfQuestionsTextView.setText(numberOfQuestionsTextView.getText() + " : " + String.valueOf(numberOfQuestions));
 
         Button okButton = findViewById(R.id.go_to_main_button);

@@ -31,7 +31,6 @@ public class QuestionnaireAdapter extends RecyclerView.Adapter {
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         public Button button;
         public ViewHolder(View v) {
             super(v);

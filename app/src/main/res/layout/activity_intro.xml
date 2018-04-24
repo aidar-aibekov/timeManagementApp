@@ -8,69 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/colorDarkRed">
+
 
         <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="300dp"
             android:orientation="horizontal"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="130dp">
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="0dp">
 
-
-            <TextView
-                android:id="@+id/HelloInIntroTextView"
-                android:layout_width="500dp"
-                android:layout_height="700dp"
-                android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:text="Hello!"
-                android:textSize="40sp" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@mipmap/tasker"
+                android:maxWidth="160dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds ="true"
+                />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="190dp"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="120dp">
-
-
-            <TextView
-                android:id="@+id/WelcomeInIntroTextView"
-                android:layout_width="500dp"
-                android:layout_height="700dp"
-                android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:paddingTop="0dp"
-                android:text="Welcome"
-                android:textSize="30sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="-35dp"
-            android:layout_marginLeft="82dp">
-
-
-            <TextView
-                android:id="@+id/ToTheTaskerInIntroTextView"
-                android:layout_width="500dp"
-                android:layout_height="700dp"
-                android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:text="to the «Tasker!»"
-                android:textSize="30sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="45dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="150dp"></LinearLayout>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
