@@ -3,11 +3,13 @@ package de.fh_zwickau.taskerapp.questionnaire.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import de.fh_zwickau.taskerapp.MainActivity;
 import de.fh_zwickau.taskerapp.R;
 import de.fh_zwickau.taskerapp.questionnaire.model.Answer;
 import de.fh_zwickau.taskerapp.questionnaire.model.Question;
@@ -37,13 +39,15 @@ public class QuestionnaireResultActivity extends AppCompatActivity {
         TextView totalPointsTextView = findViewById(R.id.total_points_textview);
         TextView avgPointsTextView = findViewById(R.id.avg_points_textview);
         TextView numberOfQuestionsTextView = findViewById(R.id.number_of_questions_textview);
-        TextView infoTextView = findViewById(R.id.result_info_textview);
 
         totalPointsTextView.setText(totalPointsTextView.getText() + " : " + String.valueOf(totalPoints));
         avgPointsTextView.setText(avgPointsTextView.getText() + " : " + String.valueOf(avgPoint));
         numberOfQuestionsTextView.setText(numberOfQuestionsTextView.getText() + " : " + String.valueOf(numberOfQuestions));
 
-        infoTextView.setText("addition info");
+        Button okButton = findViewById(R.id.go_to_main_button);
+        okButton.setOnClickListener(v ->
+            startActivity(new Intent(this, MainActivity.class)
+        ));
     }
 
     private Integer calcPoints() {
