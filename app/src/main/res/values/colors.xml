@@ -7,4 +7,7 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorIndigo">#4b0082</color>
     <color name="colorBlue">#003366</color>
+    <color name="colorDarkRed">#ba2d65</color>
+    <color name="red">#F44336</color>
+    <color name="black">#000000</color>
 </resources>

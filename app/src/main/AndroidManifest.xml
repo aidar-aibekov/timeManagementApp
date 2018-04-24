@@ -17,12 +17,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".todoapp.db.TaskProvider"
+            android:authorities="de.fh_zwickau.taskerapp.todoapp"
+            android:exported="false"/>
+
+        <activity android:name=".todoapp.TodoEntryActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name=".todoapp.TaskActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light"
+            android:parentActivityName=".todoapp.TodoEntryActivity"/>
+
+        <activity
+            android:name=".todoapp.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light"
+            android:parentActivityName=".todoapp.TodoEntryActivity"/>
+
+        <activity
+            android:name=".todoapp.TaskDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light"
+            android:parentActivityName=".todoapp.TodoEntryActivity"/>
+
+        <service
+            android:name=".todoapp.db.TaskUpdateService"
+            android:exported="false" />
+
+
         <activity android:name=".MainActivity"/>
         <activity android:name=".questionnaire.ui.QuestionnaireListActivity" />
         <activity android:name=".questionnaire.ui.QuestionLayout" />
         <activity android:name=".questionnaire.ui.QuestionnaireResultActivity"></activity>
         <activity android:name=".AbouttmActivity" />
-        <activity android:name=".AddTaskActivity" />
+        <activity android:name=".AddTaskActivity" android:theme="@style/Theme.Design.Light"/>
+
     </application>
 
 </manifest>

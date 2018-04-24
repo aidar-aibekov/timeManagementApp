@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import de.fh_zwickau.taskerapp.questionnaire.ui.QuestionnaireListActivity;
+import de.fh_zwickau.taskerapp.todoapp.TodoEntryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,72 +17,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        TextView textView = findViewById(R.id.my_text_view);
-//
-//
-//        Intent intent = new Intent(this, QuestionnaireListActivity.class);
-//        startActivity(intent);
         initialiseMainPageGUI();
     }
 
     public void initialiseMainPageGUI(){
-        Button viewAllTasksButton=(Button)findViewById(R.id.viewAllTasksButton);
-        viewAllTasksButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("MainActivity", "viewAllTasksButton has just been pressed");
-            }
-        });
-        viewAllTasksButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ViewAllTasksActivity.class);
-//                getIntent().putExtra(PropertyApp.EXTRA_TO_RENT, "false");
-                startActivity(i);
-            }
+        Button viewAllTasksButton= findViewById(R.id.viewAllTasksButton);
+        viewAllTasksButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TodoEntryActivity.class);
+            startActivity(intent);
         });
 
-        Button addNewTaskButton=(Button)findViewById(R.id.addNewTaskButton);
-        addNewTaskButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("MainActivity", "addNewTaskButton has just been pressed");
-            }
+        Button addNewTaskButton= findViewById(R.id.addNewTaskButton);
+        addNewTaskButton.setOnClickListener(v -> Log.d("MainActivity", "addNewTaskButton has just been pressed"));
+        addNewTaskButton.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, AddTaskActivity.class);
+            startActivity(i);
         });
-        addNewTaskButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AddTaskActivity.class);
-//                getIntent().putExtra(PropertyApp.EXTRA_TO_RENT, "false");
-                startActivity(i);
-            }
-        });
-        Button passTheTestButton=(Button)findViewById(R.id.passTheTestButton);
-        passTheTestButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("MainActivity", "passTheTest has just been pressed");
-            }
-        });
-        passTheTestButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, QuestionnaireListActivity.class);
-//                getIntent().putExtra(PropertyApp.EXTRA_TO_RENT, "false");
-                startActivity(i);
-            }
+        Button passTheTestButton= findViewById(R.id.passTheTestButton);
+        passTheTestButton.setOnClickListener(v -> Log.d("MainActivity", "passTheTest has just been pressed"));
+        passTheTestButton.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, QuestionnaireListActivity.class);
+            startActivity(i);
         });
 
-        Button aboutTimeManagement=(Button)findViewById(R.id.aboutTimeManagemnetButton);
-        aboutTimeManagement.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("MainActivity", "aboutTimeManagement has just been pressed");
-            }
-        });
-        aboutTimeManagement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AbouttmActivity.class);
-//                getIntent().putExtra(PropertyApp.EXTRA_TO_RENT, "false");
-                startActivity(i);
-            }
+        Button aboutTimeManagement= findViewById(R.id.aboutTimeManagemnetButton);
+        aboutTimeManagement.setOnClickListener(v -> Log.d("MainActivity", "aboutTimeManagement has just been pressed"));
+        aboutTimeManagement.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, AbouttmActivity.class);
+            startActivity(i);
         });
 
     }
